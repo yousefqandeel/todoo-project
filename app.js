@@ -37,3 +37,35 @@ switch (con) {
     default:
         alert("Welcome To Our Website");
 }
+var question = "My question to you";
+var answer = [];
+var userInput;
+
+function answers(userInput) {
+    if (userInput == "yes") {
+        return "yes";
+    }
+    else if (userInput == "no") {
+        return "no";
+    }
+    if (userInput == "") {
+        return "invalid";
+    }
+}
+
+function questions(question) {
+    for (var i = 1; i <= 3; i++) {
+        var userInput = prompt(question);
+        //console.log(userInput);
+        answer.push(answers(userInput));
+    }
+};
+
+function print() {
+    for (i = 0; i <= answer.length - 1; i++) {
+        console.log(answer[i]);
+    }
+}
+
+questions(question);
+print();
