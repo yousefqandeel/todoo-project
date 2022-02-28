@@ -27,7 +27,7 @@ var con = confirm(conText);
 
 switch (con) {
     case true:
-        alert("You Skiped Welcoming Message");
+        alert("You Skiped Welcoming Message.");
         break;
 
     case false:
@@ -48,17 +48,14 @@ function answers(userInput) {
     else if (userInput == "no") {
         return "no";
     }
-    if (userInput == "") {
+    else {
         return "invalid";
     }
 }
 
 function questions(question) {
-    for (var i = 1; i <= 3; i++) {
-        var userInput = prompt(question);
-        //console.log(userInput);
-        answer.push(answers(userInput));
-    }
+    var userInput = prompt(question).toLowerCase();
+    answer.push(answers(userInput));
 };
 
 function print() {
@@ -67,5 +64,7 @@ function print() {
     }
 }
 
-questions(question);
+questions("Do you love your mother");
+questions("Do you love Pizza");
+questions("Do you love Mansaf");
 print();
