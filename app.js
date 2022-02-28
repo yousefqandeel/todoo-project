@@ -27,7 +27,7 @@ var con = confirm(conText);
 
 switch (con) {
     case true:
-        alert("You Skiped Welcoming Message");
+        alert("You Skiped Welcoming Message.");
         break;
 
     case false:
