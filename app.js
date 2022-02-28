@@ -37,3 +37,34 @@ switch (con) {
     default:
         alert("Welcome To Our Website");
 }
+var question = "My question to you";
+var answer = [];
+var userInput;
+
+function answers(userInput) {
+    if (userInput == "yes") {
+        return "yes";
+    }
+    else if (userInput == "no") {
+        return "no";
+    }
+    else {
+        return "invalid";
+    }
+}
+
+function questions(question) {
+    var userInput = prompt(question).toLowerCase();
+    answer.push(answers(userInput));
+};
+
+function print() {
+    for (i = 0; i <= answer.length - 1; i++) {
+        console.log(answer[i]);
+    }
+}
+
+questions("Do you love your mother");
+questions("Do you love Pizza");
+questions("Do you love Mansaf");
+print();
